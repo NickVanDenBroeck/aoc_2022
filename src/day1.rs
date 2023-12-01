@@ -37,7 +37,7 @@ pub fn part1(file_path: &str) {
 }    
 
 pub fn part2(file_path: &str){
-    let file = File::open(file_path).expect("Failed to open input file");
+    let file: File = File::open(file_path).expect("Failed to open input file");
     let reader = BufReader::new(file);
 
     let mut elf_calories: HashMap<usize, i32> = HashMap::new();
